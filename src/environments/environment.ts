@@ -3,8 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  gov: 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/',
 };
+
+export const endpoints = {
+  dolar: {
+    gov: environment.gov,
+  },
+  address: {
+    cep: 'https://api.postmon.com.br/v1/cep/',
+  }
+}
 
 /*
  * For easier debugging in development mode, you can import the following file

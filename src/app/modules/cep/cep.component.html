@@ -1,0 +1,36 @@
+<div class="container mt-3">
+  <div class="row mt-5">
+    <div class="col">
+      <h2>Cotação e compra de dólar com envio por motoboy</h2>
+      <form #formCep="ngForm" (ngSubmit)="calcShipping(formCep)">
+        <div class="form-group">
+          <label>Informe o seu nome completo:</label>
+            <input ngModel
+                class="form-control"
+                #inputName="ngModel"
+                name="inputName"
+                placeholder="Nome completo..."
+                type="text" 
+                id="inputName" />
+        </div>
+        <div class="form-group">
+          <label>Digite o CEP de destino</label>
+          <input ngModel
+                class="form-control"
+                #inputCep="ngModel"
+                name="inputCep"
+                placeholder="CEP..."
+                type="text"
+                id="inputCep" />
+        </div>
+        <button type="submit" class="btn btn-primary">Calcular frete</button>
+      </form>
+
+      <div class="content-infos">
+        <p id="value-shipping"></p>
+        <h4 id="text-final-value"></h4>
+        <button *ngIf="showHireButton" type="submit" class="btn btn-primary" (click)="goToNextPage()">Contratar</button>
+      </div>
+    </div>
+  </div>
+</div>

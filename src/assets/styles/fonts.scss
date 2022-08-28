@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'AbhayaLibre-Regular';
+    src: url('../fonts/AbhayaLibre-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'AbhayaLibre-SemiBold';
+    src: url('../fonts/AbhayaLibre-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'AbhayaLibre-Bold';
+    src: url('../fonts/AbhayaLibre-Bold.ttf');
+}
+
+:root {
+    --font-family-ab-bold: "AbhayaLibre-Bold", Helvetica;
+    --font-family-ab-semibold: "AbhayaLibre-SemiBold", Helvetica;
+    --font-family-ab-regular: "AbhayaLibre-Regular", Helvetica;
+}

@@ -1,0 +1,57 @@
+<div class="container mt-3">
+  <div class="row mt-5">
+    <div class="col">
+      <h2>Cotação e compra de dólar com envio por motoboy</h2>
+      <h5>Informe a forma que deseja comprar o dolár. Você pode passar uma quantidade de dólares, ou passar um valor em reais que deseja:</h5>
+        
+      <form id="option">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" value="radioQuantity" 
+            [(ngModel)]="inputRadio" name="radioQuantity" id="radioQuantity"
+            (change)="onItemChange($event)"/>
+          <label class="form-check-label" for="radioQuantity">
+            Quantidade em dólar
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" value="radioReal" 
+            [(ngModel)]="inputRadio" name="radioReal" id="radioReal"
+            (change)="onItemChange($event)"/>
+          <label class="form-check-label" for="radioReal">
+            Valor em reais
+          </label>
+        </div>
+      </form>
+        
+      <form id="dolarForm" (ngSubmit)="calcValue()">
+        <div class="form-group" *ngIf="showInputQuantity">
+          <label>Digite a quantidade de dólar que deseja comprar</label>
+            <input ngModel
+                class="form-control"
+                #inputQuantity="ngModel"
+                name="dolarQuantity"
+                placeholder="Quantidade..."
+                type="text" 
+                id="dolarQuantity" 
+                required 
+                (keypress)="setDisable()"
+                />
+        </div>
+        <div class="form-group" *ngIf="showInputReal">
+          <label>Digite o valor em real que deseja em dólar</label>
+          <input ngModel
+                class="form-control"
+                #inputReal="ngModel"
+                name="realValue"
+                placeholder="Valor em real..."
+                type="text"
+                id="realValue" 
+                required
+                (keypress)="setDisable()"
+                />
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="disabled">Iniciar Compra</button>
+      </form>
+    </div>
+  </div>
+</div>
