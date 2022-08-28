@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { endpoints } from 'src/environments/environment';
 import { Address } from '../models/cep';
 import { DolarValue } from '../models/dolarCotacao';
+//@ts-ignore 
 import {} from 'googlemaps';
 //@ts-ignore 
 import Localbase from 'localbase'
